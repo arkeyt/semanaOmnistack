@@ -28,7 +28,7 @@ function Profile() {
             await api.delete(`incidents/${id}`,{
                 headers: { authorization: ongId, }
             });
-            setIncidents(incidents.filter(incident => incident.id != id));
+            setIncidents(incidents.filter(incident => incident.id !== id));
         } catch (error) {
             alert('Erro ao deletar caso, tente novamente.');
         }
